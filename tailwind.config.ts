@@ -51,6 +51,12 @@ export default {
           "4": "var(--chart-4)",
           "5": "var(--chart-5)",
         },
+        // Custom Hell theme colors
+        "hell-dark": "var(--hell-dark)",
+        "hell-darker": "var(--hell-darker)",
+        "blood-red": "var(--blood-red)",
+        "amber-glow": "var(--amber-glow)",
+        "shadow-gray": "var(--shadow-gray)",
         sidebar: {
           DEFAULT: "var(--sidebar-background)",
           foreground: "var(--sidebar-foreground)",

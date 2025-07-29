@@ -20,9 +20,21 @@ export function CharacterModal({ open, onOpenChange }: CharacterModalProps) {
           {characterPersonalities.map((personality, index) => (
             <div 
               key={index}
-              className={`bg-hell-dark/60 rounded-lg p-4 border-l-4 border-${personality.color}`}
+              className={`bg-hell-dark/60 rounded-lg p-4 border-l-4 ${
+                personality.color === 'amber-glow' ? 'border-amber-glow' :
+                personality.color === 'blood-red' ? 'border-blood-red' :
+                personality.color === 'green-500' ? 'border-green-500' :
+                personality.color === 'blue-500' ? 'border-blue-500' :
+                'border-orange-500'
+              }`}
             >
-              <h3 className={`font-semibold text-${personality.color} mb-2`}>
+              <h3 className={`font-semibold mb-2 ${
+                personality.color === 'amber-glow' ? 'text-amber-glow' :
+                personality.color === 'blood-red' ? 'text-blood-red' :
+                personality.color === 'green-500' ? 'text-green-500' :
+                personality.color === 'blue-500' ? 'text-blue-500' :
+                'text-orange-500'
+              }`}>
                 {personality.name}
               </h3>
               <p className="text-gray-300 text-sm">
